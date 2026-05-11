@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GANGSTAR X</title>
+
+<!-- FONTS -->
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Bebas+Neue&family=Creepster&display=swap" rel="stylesheet">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:black;
+overflow-x:hidden;
+color:white;
+}
+
+/* HERO */
+
+.hero{
+width:100%;
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.82)),
+url('bg.jpg');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 60px;
+
+flex-wrap:wrap;
+}
+
+/* LOGO */
+
+.logo{
+font-family:'Creepster',cursive;
+font-size:60px;
+color:red;
+
+text-shadow:
+0 0 10px red,
+0 0 25px red,
+0 0 50px red;
+}
+
+/* MENU */
+
+nav{
+display:flex;
+gap:35px;
+flex-wrap:wrap;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:28px;
+letter-spacing:2px;
+
+transition:0.3s;
+}
+
+nav a:hover{
+color:red;
+}
+
+/* BUTTON */
+
+.join-btn{
+padding:15px 38px;
+
+background:transparent;
+border:2px solid red;
+
+color:white;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:24px;
+letter-spacing:2px;
+
+cursor:pointer;
+
+transition:0.4s;
+}
+
+.join-btn:hover{
+background:red;
+
+box-shadow:
+0 0 15px red,
+0 0 40px red;
+}
+
+/* MAIN */
+
+.main{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:70px 80px;
+
+gap:50px;
+flex-wrap:wrap;
+}
+
+/* LEFT */
+
+.left{
+max-width:650px;
+}
+
+.small{
+font-family:'Bebas Neue',sans-serif;
+font-size:30px;
+letter-spacing:4px;
+color:#ccc;
+}
+
+.small span{
+color:red;
+}
+
+/* TITLE */
+
+.title{
+margin-top:20px;
+line-height:0.9;
+}
+
+.no{
+font-family:'Creepster',cursive;
+font-size:190px;
+color:white;
+}
+
+.fear{
+font-family:'Creepster',cursive;
+font-size:190px;
+color:red;
+
+text-shadow:
+0 0 10px red,
+0 0 30px red,
+0 0 60px red;
+}
+
+/* TEXT */
+
+.desc{
+margin-top:35px;
+
+font-family:'Oswald',sans-serif;
+font-size:34px;
+line-height:55px;
+
+color:#ddd;
+}
+
+/* ENTER BUTTON */
+
+.enter-btn{
+margin-top:45px;
+
+padding:22px 75px;
+
+background:red;
+border:none;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:34px;
+letter-spacing:3px;
+
+color:white;
+
+cursor:pointer;
+
+transition:0.4s;
+
+box-shadow:
+0 0 15px red,
+0 0 50px red;
+}
+
+.enter-btn:hover{
+transform:scale(1.05);
+}
+
+/* RIGHT IMAGE */
+
+.right img{
+width:520px;
+max-width:100%;
+
+border-radius:10px;
+
+box-shadow:
+0 0 25px rgba(255,0,0,0.4);
+}
+
+/* SECTIONS */
+
+.section{
+padding:90px 25px;
+text-align:center;
+background:#050505;
+border-top:1px solid rgba(255,0,0,0.15);
+}
+
+.section h2{
+font-family:'Creepster',cursive;
+font-size:70px;
+color:red;
+
+text-shadow:
+0 0 10px red,
+0 0 25px red;
+}
+
+.section p{
+margin-top:30px;
+
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+
+font-family:'Oswald',sans-serif;
+font-size:28px;
+line-height:50px;
+
+color:#bbb;
+}
+
+/* CARDS */
+
+.cards{
+margin-top:60px;
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+width:320px;
+
+padding:35px;
+
+background:rgba(255,255,255,0.03);
+
+border:1px solid rgba(255,0,0,0.2);
+
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+
+border-color:red;
+
+box-shadow:
+0 0 20px rgba(255,0,0,0.35);
+}
+
+.card h3{
+font-family:'Bebas Neue',sans-serif;
+font-size:35px;
+letter-spacing:2px;
+}
+
+.card p{
+margin-top:20px;
+font-size:22px;
+line-height:38px;
+}
+
+/* FOOTER */
+
+.footer{
+padding:25px;
+text-align:center;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:22px;
+letter-spacing:2px;
+
+color:#777;
+
+background:black;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+justify-content:center;
+gap:25px;
+padding:25px 20px;
+}
+
+nav{
+justify-content:center;
+gap:20px;
+}
+
+.main{
+padding:40px 20px;
+justify-content:center;
+text-align:center;
+}
+
+.small{
+font-size:22px;
+}
+
+.no,.fear{
+font-size:110px;
+}
+
+.desc{
+font-size:24px;
+line-height:40px;
+}
+
+.enter-btn{
+font-size:24px;
+padding:18px 45px;
+}
+
+.right img{
+width:330px;
+margin-top:30px;
+}
+
+.section h2{
+font-size:50px;
+}
+
+.section p{
+font-size:22px;
+line-height:40px;
+}
+
+.card{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">GANGSTAR</div>
+
+<nav>
+
+<a href="#home">HOME</a>
+
+<a href="#about">ABOUT</a>
+
+<a href="#crew">CREW</a>
+
+<a href="#gallery">GALLERY</a>
+
+<a href="#contact">CONTACT</a>
+
+</nav>
+
+<button class="join-btn"
+
+onclick="window.open('https://wa.me/918101476602')">
+
+JOIN CREW
+
+</button>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- LEFT -->
+
+<div class="left">
+
+<div class="small">
+
+WELCOME TO THE <span>EMPIRE</span>
+
+</div>
+
+<div class="title">
+
+<div class="no">NO</div>
+
+<div class="fear">FEAR</div>
+
+</div>
+
+<div class="desc">
+
+Power, money, loyalty and revenge —
+all in one empire.
+We don’t follow rules,
+we make them.
+
+</div>
+
+<button class="enter-btn"
+
+onclick="window.location.href='#about'">
+
+ENTER THE WORLD
+
+</button>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="right">
+
+<img src="bg.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<h2>ABOUT US</h2>
+
+<p>
+
+Fearless empire built with loyalty,
+power and respect.
+Dark aesthetics and gangster vibes combined into one world.
+
+</p>
+
+</section>
+
+<!-- CREW -->
+
+<section class="section" id="crew">
+
+<h2>OUR CREW</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>POWER</h3>
+
+<p>
+Rule the streets with fearless energy and domination.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>LOYALTY</h3>
+
+<p>
+Real brothers never betray each other.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>RESPECT</h3>
+
+<p>
+Respect is earned,
+never given.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+
+<h2>GALLERY</h2>
+
+<p>
+
+Dark nights,
+red smoke,
+street kings and mafia lifestyle moments.
+
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<h2>CONTACT</h2>
+
+<p>
+
+WhatsApp: 8101476602
+
+<br><br>
+
+Instagram: shwxy_mo9rul
+
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 GANGSTAR X — ALL RIGHTS RESERVED
+
+</div>
+
+<!-- MUSIC -->
+
+<audio autoplay loop>
+<source src="song.mp3" type="audio/mp3">
+</audio>
+
+</body>
+</html>
