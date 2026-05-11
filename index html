@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gangstar X</title>
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Bebas+Neue&family=Creepster&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:black;
+overflow-x:hidden;
+color:white;
+}
+
+/* HERO */
+
+.hero{
+width:100%;
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.82)),
+url('bg.jpg');
+
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+padding:30px 70px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+/* LOGO */
+
+.logo{
+font-family:'Creepster',cursive;
+font-size:55px;
+color:#ff0000;
+
+text-shadow:
+0 0 10px red,
+0 0 20px red,
+0 0 50px red;
+}
+
+/* MENU */
+
+nav{
+display:flex;
+gap:45px;
+flex-wrap:wrap;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:28px;
+letter-spacing:2px;
+
+transition:0.3s;
+}
+
+nav a:hover{
+color:red;
+}
+
+/* BUTTON */
+
+.join-btn{
+padding:14px 40px;
+
+border:2px solid red;
+background:transparent;
+
+color:white;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:24px;
+letter-spacing:2px;
+
+cursor:pointer;
+transition:0.4s;
+}
+
+.join-btn:hover{
+background:red;
+box-shadow:0 0 25px red;
+}
+
+/* MAIN */
+
+.main{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:50px 90px;
+gap:50px;
+flex-wrap:wrap;
+}
+
+/* LEFT */
+
+.left{
+max-width:650px;
+}
+
+.small{
+font-family:'Bebas Neue',sans-serif;
+letter-spacing:4px;
+font-size:28px;
+color:#ccc;
+}
+
+.small span{
+color:red;
+}
+
+.title{
+margin-top:20px;
+line-height:0.9;
+}
+
+.no{
+font-family:'Creepster',cursive;
+font-size:180px;
+color:white;
+}
+
+.fear{
+font-family:'Creepster',cursive;
+font-size:180px;
+color:red;
+
+text-shadow:
+0 0 15px red,
+0 0 40px red;
+}
+
+/* TEXT */
+
+.desc{
+margin-top:35px;
+
+font-family:'Oswald',sans-serif;
+font-size:38px;
+line-height:58px;
+font-weight:300;
+
+color:#d0d0d0;
+}
+
+/* BUTTON */
+
+.enter-btn{
+margin-top:45px;
+
+padding:22px 70px;
+
+background:red;
+border:none;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:34px;
+letter-spacing:3px;
+
+color:white;
+cursor:pointer;
+
+transition:0.4s;
+
+box-shadow:
+0 0 20px red,
+0 0 50px red;
+}
+
+.enter-btn:hover{
+transform:scale(1.05);
+}
+
+/* RIGHT IMAGE */
+
+.right img{
+width:520px;
+max-width:100%;
+
+filter:
+drop-shadow(0 0 20px red);
+}
+
+/* CARDS */
+
+.cards{
+width:100%;
+
+display:flex;
+justify-content:center;
+gap:30px;
+
+padding:40px 60px 90px;
+flex-wrap:wrap;
+}
+
+/* CARD */
+
+.card{
+width:350px;
+
+background:rgba(255,255,255,0.03);
+
+border:1px solid rgba(255,0,0,0.25);
+
+padding:40px 30px;
+
+backdrop-filter:blur(4px);
+
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+
+border-color:red;
+
+box-shadow:0 0 25px rgba(255,0,0,0.35);
+}
+
+/* ICON */
+
+.icon{
+font-size:55px;
+color:red;
+}
+
+/* CARD TITLE */
+
+.card h2{
+margin-top:20px;
+
+font-family:'Creepster',cursive;
+font-size:48px;
+color:white;
+}
+
+/* CARD TEXT */
+
+.card p{
+margin-top:20px;
+
+font-family:'Oswald',sans-serif;
+font-size:24px;
+line-height:40px;
+
+color:#bbb;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:20px;
+
+font-family:'Bebas Neue',sans-serif;
+font-size:22px;
+letter-spacing:2px;
+
+color:#888;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+padding:25px 20px;
+justify-content:center;
+gap:25px;
+}
+
+nav{
+justify-content:center;
+gap:20px;
+}
+
+.main{
+padding:30px 20px;
+justify-content:center;
+text-align:center;
+}
+
+.small{
+font-size:22px;
+}
+
+.no,.fear{
+font-size:110px;
+}
+
+.desc{
+font-size:24px;
+line-height:40px;
+}
+
+.enter-btn{
+font-size:24px;
+padding:18px 40px;
+}
+
+.right img{
+width:320px;
+margin-top:30px;
+}
+
+.card{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">GANGSTAR</div>
+
+<nav>
+<a href="#">HOME</a>
+<a href="#">ABOUT</a>
+<a href="#">CREW</a>
+<a href="#">GALLERY</a>
+<a href="#">CONTACT</a>
+</nav>
+
+<button class="join-btn">JOIN CREW</button>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="left">
+
+<div class="small">
+WELCOME TO THE <span>EMPIRE</span>
+</div>
+
+<div class="title">
+
+<div class="no">NO</div>
+<div class="fear">FEAR</div>
+
+</div>
+
+<div class="desc">
+Power, money, loyalty and revenge —
+all in one empire.
+We don’t follow rules,
+we make them.
+</div>
+
+<button class="enter-btn">
+ENTER THE WORLD
+</button>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="right">
+
+<img src="bg.jpg">
+
+</div>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">👑</div>
+
+<h2>POWER</h2>
+
+<p>
+Rule the streets with style and fearless attitude.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">💀</div>
+
+<h2>LOYALTY</h2>
+
+<p>
+Real gang never betrays their own brothers.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">⚡</div>
+
+<h2>RESPECT</h2>
+
+<p>
+Respect is earned,
+never given.
+</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Gangstar X. All Rights Reserved.
+</div>
+
+</section>
+
+<!-- MUSIC -->
+
+<audio autoplay loop>
+<source src="song.mp3" type="audio/mp3">
+</audio>
+
+</body>
+</html>
